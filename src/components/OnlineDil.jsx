@@ -2,6 +2,7 @@ import { resdatachain } from "../data/resdatachain";
 import { MdStars } from "react-icons/md";
 
 const Onlinestore = () => {
+  const buttons=["Filter","SortBy","fast delivery","new on swiggy","rating 4.0+","offers","Rs. 300-Rs. 600" ,"less than Rs. 300"];
   return (
     <>
     <div className="max-w-[1200px] mx-auto mt-10">
@@ -10,14 +11,14 @@ const Onlinestore = () => {
          Online delivery where you want in just 20 mins.
         </div>
       </div>
-      <div className="w-full border border-green-300">
-        <div className="flex gap-10 font-medium text-[15px]">
-            <span className=" cursor-pointer">sortby</span>
-            <span className=" cursor-pointer">filter</span>
-            <span className=" cursor-pointer">place</span>
+      <div className="w-full">
+        <div className="grid grid-cols-2 text-wrap md:flex gap-4 font-medium text-[15px] overflow-hidden">
+        {buttons.map((item,idx)=>(
+            <span key={idx} className=" cursor-pointer border border-gray-300 rounded-full md:px-3 py-1 hover:bg-slate-200 hover:rounded-xl w-[67%] md:w-full lg:w-full flex justify-center items-center">{item}</span>
+        ))}
         </div>
       </div>
-      <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 m-14 lg:grid-cols-4">
+      <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 m-5 lg:grid-cols-4">
         {resdatachain.map((item, idx) => (
           <div
             key={idx}
