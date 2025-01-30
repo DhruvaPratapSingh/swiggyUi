@@ -43,7 +43,7 @@ const LeafletMapSearch = () => {
 
   return (
     <div className="p-5 mt-14 flex flex-col items-center">
-      <div className="flex items-center space-x-2 mb-4">
+      <div className="flex flex-col md:flex-row items-center space-x-2 mb-4">
         <input
           ref={inputRef}
           className="outline-none p-2 rounded-md border-2 border-gray-500 w-80"
@@ -52,7 +52,7 @@ const LeafletMapSearch = () => {
         />
         <button
           onClick={handleSearch}
-          className="bg-blue-500 text-white px-4 py-2 rounded-md"
+          className="bg-blue-500 text-white px-4 py-2 rounded-md "
         >
           Search
         </button>
@@ -61,7 +61,7 @@ const LeafletMapSearch = () => {
         center={markerPosition}
         zoom={13}
         scrollWheelZoom={false}
-        style={{ height: "400px", width: "90%" }}
+        style={{ height: "400px", width: "80%" }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
