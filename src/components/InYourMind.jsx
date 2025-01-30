@@ -24,13 +24,19 @@ const InYourMind = () => {
                 <div className="font-bold text-[24px]">Whats In Your Mind?</div>
                 <div className="flex">
                     <div
-                        className="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-[#e2e2e7] mx-2 cursor-pointer"
+                        className={`flex items-center justify-center w-[30px] h-[30px] rounded-full bg-[#e2e2e7] mx-2 cursor-pointer transition-opacity duration-500 ${
+                            slide === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100"
+                        }`}
                         onClick={rightSlide}
                     >
                         <FaArrowLeft />
                     </div>
                     <div
-                        className="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-[#e2e2e7] mx-2 cursor-pointer"
+                       className={`flex items-center justify-center w-[30px] h-[30px] rounded-full bg-[#e2e2e7] mx-2 cursor-pointer transition-opacity duration-500 ${
+                            slide + 8 >= inyourminddata.length
+                                ? "opacity-50 cursor-not-allowed"
+                                : "opacity-100"
+                        }`}
                         onClick={leftSlide}
                     >
                         <FaArrowRight />
